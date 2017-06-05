@@ -1,0 +1,37 @@
+{
+  "name": "japanese_api",
+  "version": "1.0.0",
+  "description": "API para el manejo de los tres sistemas de escritura japonés (hiragana, katakana, kanji)",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leojim06/japanese_api.git"
+  },
+  "keywords": [
+    "MEAN",
+    "2.0",
+    "Japones",
+    "Kana",
+    "Kanji"
+  ],
+  "author": "leojim06",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leojim06/japanese_api/issues"
+  },
+  "homepage": "https://github.com/leojim06/japanese_api#readme",
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.27",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.7",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
