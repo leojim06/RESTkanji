@@ -1,5 +1,6 @@
 #Own
 dist
+.vscode
 
 # Logs
 logs
