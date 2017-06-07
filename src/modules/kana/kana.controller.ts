@@ -11,3 +11,55 @@ export async function createKana(req: Request, res: Response) {
       return res.status(400).json(e);
    }
 }
+
+export async function getKanaById(req: Request, res: Response) {
+   try {
+      const kana = await Kana.findById(req.params.id).populate('user');
+      return res.status(200).json(kana);
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}
+
+export async function getKanaList(req: Request, res: Response) {
+   try {
+      const kana = await Kana.list({ limit: req.query.limit, skip: req.query.skip });
+      return res.status(200).json(kana);
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}
+
+export async function updateKana(req: Request, res: Response) {
+   try {
+      const kana = await Kana.findById(req.params.id);
+
+      if (!kana.user.equals(req.user._id)) {
+         return res.sendStatus(401);
+      }
+
+      Object.keys(req.body).forEach(key => {
+         kana[key] = req.body[key];
+      });
+
+      return res.status(200).json(await kana.save());
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}
+
+export async function deleteKana(req: Request, res: Response) {
+   try {
+      const kana = await Kana.findById(req.params.id);
+
+      if (!kana.user.equals(req.user._id)) {
+         return res.sendStatus(401);
+      }
+
+      await kana.remove();
+
+      return res.sendStatus(200);
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}

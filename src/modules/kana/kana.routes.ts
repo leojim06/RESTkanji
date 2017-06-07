@@ -7,6 +7,16 @@ import kanaValidation from './kana.validations';
 
 const routes: Router = Router();
 
-routes.post('/', authJwt, validate(kanaValidation.createKana), kanaController.createKana);
+routes.post('/',
+   authJwt,
+   validate(kanaValidation.createKana),
+   kanaController.createKana);
+routes.get('/:id', kanaController.getKanaById);
+routes.get('/', kanaController.getKanaList);
+routes.patch('/:id',
+   authJwt,
+   validate(kanaValidation.updateKana),
+   kanaController.updateKana);
+routes.delete('/:id', authJwt, kanaController.deleteKana);
 
 export default routes;

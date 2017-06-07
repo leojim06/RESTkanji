@@ -27,12 +27,31 @@ KanaSchema.plugin(uniqueValidator, {
    message: '{VALUE} ya fue tomado',
 });
 
+KanaSchema.methods = {
+   toJSON() {
+      return {
+         _id: this._id,
+         symbol: this.symbol,
+         strokes: this.strokes,
+         shape: this.shape,
+         user: this.user,
+      }
+   },
+};
+
 KanaSchema.statics = {
    createKana(args, user) {
       return this.create({
          ...args, user,
       })
-   }
+   },
+   list({ skip = 0, limit = 5 } = {}) {
+      return this.find()
+         .sort({ symbol: 1 })
+         .skip(skip)
+         .limit(limit)
+         .populate('user');
+   },
 }
 
 export default model('Kana', KanaSchema);
