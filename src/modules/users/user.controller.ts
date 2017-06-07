@@ -7,7 +7,7 @@ export async function signUp(req: Request, res: Response) {
       const user = await User.create(req.body);
       return res.status(201).json(user);
    } catch (e) {
-      return res.status(500).json(e);
+      return res.status(400).json(e);
    }
 }
 

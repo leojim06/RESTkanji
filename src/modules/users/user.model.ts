@@ -2,6 +2,7 @@ import { Schema, model } from 'mongoose';
 import * as validator from 'validator';
 import { hashSync, compareSync } from 'bcrypt-nodejs';
 import * as jwt from 'jsonwebtoken';
+import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { passwordReg } from './user.validation';
 import constants from '../../config/constants';
@@ -47,6 +48,10 @@ const UserSchema = new Schema({
       }
    }
 }, { timestamps: true });
+
+UserSchema.plugin(uniqueValidator, {
+   message: '{VALUE} ya fue tomado',
+});
 
 UserSchema.pre('save', function (next) {
    if (this.isModified('password')) {
