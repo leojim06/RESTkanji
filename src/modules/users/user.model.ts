@@ -70,12 +70,17 @@ UserSchema.methods = {
    createToken() {
       return jwt.sign({ _id: this._id }, constants.JWT_SECRET);
    },
+   toAuthJSON() {
+      return {
+         _id: this._id,
+         userName: this.userName,
+         token: `JWT ${this.createToken()}`,
+      };
+   },
    toJSON() {
       return {
          _id: this._id,
          userName: this.userName,
-         email: this.email,
-         token: `JWT ${this.createToken()}`,
       };
    },
 }

@@ -12,6 +12,6 @@ export async function signUp(req: Request, res: Response) {
 }
 
 export function login(req: Request, res: Response, next: NextFunction) {
-   res.status(200).json(req.user);
+   res.status(200).json(req.user.toAuthJSON());
    return next();
 }
