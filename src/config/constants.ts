@@ -9,6 +9,7 @@ const prodConfig = {
 }
 const defaultConfig = {
    PORT: process.env.PORT || 3000,
+   JWT_SECRET: 'thisisasecret',
 };
 
 function envConfig(env) {
