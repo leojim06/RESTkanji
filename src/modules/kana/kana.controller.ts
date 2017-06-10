@@ -23,8 +23,26 @@ export async function getKanaById(req: Request, res: Response) {
 
 export async function getKanaList(req: Request, res: Response) {
    try {
-      const kana = await Kana.list({ limit: req.query.limit, skip: req.query.skip });
+      const kana = await Kana.list(getQuery(req.query));
       return res.status(200).json(kana);
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}
+
+export async function getHiragana(req: Request, res: Response) {
+   try {
+      const hiragana = await Kana.getHiragana(getQuery(req.query));
+      return res.status(200).json(hiragana);
+   } catch (e) {
+      return res.status(400).json(e);
+   }
+}
+
+export async function getKatakana(req: Request, res: Response) {
+   try {
+      const hiragana = await Kana.getKatakana(getQuery(req.query));
+      return res.status(200).json(hiragana);
    } catch (e) {
       return res.status(400).json(e);
    }
@@ -61,5 +79,16 @@ export async function deleteKana(req: Request, res: Response) {
       return res.sendStatus(200);
    } catch (e) {
       return res.status(400).json(e);
+   }
+}
+
+function getQuery(query) {
+   return query = {
+      limit: query.hasOwnProperty('page') ?
+         query.hasOwnProperty('limit') ? parseInt(query.limit) : 10 :
+         query.hasOwnProperty('limit') ? parseInt(query.limit) : 0,
+      skip: query.hasOwnProperty('skip') ? parseInt(query.skip) : 0,
+      page: query.hasOwnProperty('page') ? parseInt(query.page) : 0,
+      count: query.hasOwnProperty('count'),
    }
 }

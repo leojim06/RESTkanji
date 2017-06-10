@@ -45,12 +45,32 @@ KanaSchema.statics = {
          ...args, user,
       })
    },
-   list({ skip = 0, limit = 5 } = {}) {
-      return this.find()
+   list(query) {
+      let result = this.find()
          .sort({ symbol: 1 })
-         .skip(skip)
-         .limit(limit)
+         .skip((query.limit * query.page) + query.skip)
+         .limit(query.limit)
          .populate('user');
+      if (query.count) return result.count();
+      return result;
+   },
+   getHiragana(query) {
+      let result = this.find({ shape: 'Hiragana' })
+         .sort({ symbol: 1 })
+         .skip((query.limit * query.page) + query.skip)
+         .limit(query.limit)
+         .populate('user');
+      if (query.count) return result.count();
+      return result;
+   },
+   getKatakana(query) {
+      let result = this.find({ shape: 'Katakana' })
+         .sort({ symbol: 1 })
+         .skip((query.limit * query.page) + query.skip)
+         .limit(query.limit)
+         .populate('user');
+      if (query.count) return result.count();
+      return result;
    },
 }
 
