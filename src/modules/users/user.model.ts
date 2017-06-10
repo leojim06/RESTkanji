@@ -46,6 +46,11 @@ const UserSchema = new Schema({
          },
          message: '{VALUE} is not a valid password!',
       }
+   },
+   role: {
+      type: String,
+      enum: ['Admin', 'user'],
+      default: 'user',
    }
 }, { timestamps: true });
 

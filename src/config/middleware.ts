@@ -17,6 +17,9 @@ export default app => {
    app.use(bodyParser.urlencoded({ extended: true }));
    app.use(passport.initialize());
 
+   app.set('json spaces', 3);
+   app.set('json replacer');
+
    if (isDev) {
       app.use(morgan('dev'));
    }

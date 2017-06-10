@@ -49,5 +49,27 @@ const jwtStrategy = new JWTStrategy(jwtOpts, async (payload, done) => {
 passport.use(localStrategy);
 passport.use(jwtStrategy);
 
+//Rol strategy
+const roleStrategy = function (role) {
+   return async function (req, res, next) {
+      try {
+         const user = await User.findById(req.user);
+
+         if (!user) {
+            res.sendStatus(404);
+         }
+
+         if (user.role === role) {
+            return next();
+         }
+
+         res.sendStatus(401);
+      } catch (e) {
+         return next(e);
+      }
+   }
+}
+
 export const authLocal = passport.authenticate('local', { session: false });
 export const authJwt = passport.authenticate('jwt', { session: false });
+export const authRole = roleStrategy;
