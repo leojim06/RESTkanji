@@ -20,6 +20,9 @@ routes.patch('/:id',
    authJwt,
    validate(kanaValidation.updateKana),
    kanaController.updateKana);
-routes.delete('/:id', authJwt, kanaController.deleteKana);
+routes.delete('/:id',
+   authJwt,
+   authRole('Admin'),
+   kanaController.deleteKana);
 
 export default routes;
