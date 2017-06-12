@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 
 import Kana from './kana.model';
+import getQuery from '../../services/query.service';
 
 export async function createKana(req: Request, res: Response) {
    try {
@@ -79,16 +80,5 @@ export async function deleteKana(req: Request, res: Response) {
       return res.sendStatus(200);
    } catch (e) {
       return res.status(400).json(e);
-   }
-}
-
-function getQuery(query) {
-   return query = {
-      limit: query.hasOwnProperty('page') ?
-         query.hasOwnProperty('limit') ? parseInt(query.limit) : 10 :
-         query.hasOwnProperty('limit') ? parseInt(query.limit) : 0,
-      skip: query.hasOwnProperty('skip') ? parseInt(query.skip) : 0,
-      page: query.hasOwnProperty('page') ? parseInt(query.page) : 0,
-      count: query.hasOwnProperty('count'),
    }
 }
