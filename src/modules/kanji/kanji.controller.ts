@@ -70,15 +70,3 @@ export async function deleteKanji(req: Request, res: Response) {
       return res.status(400).json(e);
    }
 }
-
-// function getQuery(query) {
-//    return query = {
-//       limit: query.hasOwnProperty('page') ?
-//          query.hasOwnProperty('limit') ? parseInt(query.limit) : 10 :
-//          query.hasOwnProperty('limit') ? parseInt(query.limit) : 0,
-//       skip: query.hasOwnProperty('skip') ? parseInt(query.skip) : 0,
-//       page: query.hasOwnProperty('page') ? parseInt(query.page) : 0,
-//       level: query.hasOwnProperty('level') ? parseInt(query.level) : 1,
-//       count: query.hasOwnProperty('count'),
-//    }
-// }

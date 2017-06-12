@@ -6,6 +6,7 @@ import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { passwordReg } from './user.validation';
 import constants from '../../config/constants';
+import { UserModel } from './user.interface';
 
 const UserSchema = new Schema({
    email: {
@@ -73,7 +74,8 @@ UserSchema.methods = {
       return compareSync(password, this.password);
    },
    createToken() {
-      return jwt.sign({ _id: this._id }, constants.JWT_SECRET);
+      const payload = { _id: this._id, };
+      return jwt.sign(payload, constants.JWT_SECRET);
    },
    toAuthJSON() {
       return {
@@ -90,4 +92,4 @@ UserSchema.methods = {
    },
 }
 
-export default model('User', UserSchema);
+export default <UserModel>model('User', UserSchema);

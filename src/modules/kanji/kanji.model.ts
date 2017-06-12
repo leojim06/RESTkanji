@@ -1,6 +1,8 @@
 import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
+import { KanaModel } from './kanji.interface';
+
 const KanjiSchema: Schema = new Schema({
    kanji: {
       type: String,
@@ -128,4 +130,4 @@ KanjiSchema.statics = {
    },
 }
 
-export default model('Kanji', KanjiSchema);
+export default <KanaModel>model('Kanji', KanjiSchema);

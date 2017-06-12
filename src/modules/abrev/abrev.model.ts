@@ -1,6 +1,8 @@
 import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
+import { Abrev, AbrevModel } from './abrev.interface';
+
 const AbrevSchema: Schema = new Schema({
    abrev: {
       index: true,
@@ -36,4 +38,4 @@ AbrevSchema.methods = {
    },
 };
 
-export default model('Abrev', AbrevSchema);
+export default <AbrevModel>model('Abrev', AbrevSchema);

@@ -1,6 +1,8 @@
 import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
+import { KanaModel } from './kana.interface';
+
 const KanaSchema = new Schema({
    symbol: {
       type: String,
@@ -74,4 +76,4 @@ KanaSchema.statics = {
    },
 }
 
-export default model('Kana', KanaSchema);
+export default <KanaModel>model('Kana', KanaSchema);

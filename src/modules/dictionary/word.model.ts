@@ -1,6 +1,8 @@
 import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
+import { WordModel } from './word.interface';
+
 const WordSchema: Schema = new Schema({
    word: {
       type: String,
@@ -60,4 +62,4 @@ WordSchema.statics = {
    }
 }
 
-export default model('Word', WordSchema);
+export default <WordModel>model('Word', WordSchema);

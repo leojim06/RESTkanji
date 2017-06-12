@@ -1,7 +1,7 @@
 import * as passport from 'passport';
 import * as LocalStrategy from 'passport-local';
 import { IStrategyOptions, Strategy, VerifyFunction } from 'passport-local';
-import { Strategy as JWTStrategy, ExtractJwt } from 'passport-jwt';
+import { Strategy as JWTStrategy, ExtractJwt, StrategyOptions } from 'passport-jwt';
 
 import User from '../modules/users/user.model';
 import constants from '../config/constants';
@@ -27,8 +27,8 @@ const localStrategy = new Strategy(localOpts, async (email, password, done) => {
 });
 
 // Jwt strategy
-const jwtOpts = {
-   jwtFromRequest: ExtractJwt.fromAuthHeader('authorization'),
+const jwtOpts: StrategyOptions = {
+   jwtFromRequest: ExtractJwt.fromAuthHeader(),
    secretOrKey: constants.JWT_SECRET,
 };
 
