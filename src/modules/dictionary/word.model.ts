@@ -31,6 +31,13 @@ WordSchema.plugin(uniqueValidator, {
    message: '{VALUE} ya fue tomado',
 });
 
+WordSchema.pre('remove', function (next) {
+   let word = this;
+   Kanji.update({ dictionary: word._id },
+      { $pull: { dictionary: word._id } }).exec();
+   next();
+});
+
 WordSchema.methods = {
    toJSON() {
       return {
@@ -61,14 +68,6 @@ WordSchema.statics = {
    findWordById(id) {
       return this.findById(id).populate('abrev');
    },
-   async deleteWord(id) {
-      const kanji = await Kanji.findOne({ dictionary: { "$in": [id] } });
-      if (kanji && kanji.dictionary.indexOf(id) >= 0) {
-         kanji.dictionary.remove(id);
-         kanji.save();
-      }
-      return await this.findByIdAndRemove(id);
-   }
 }
 
 export default <WordModel>model('Word', WordSchema);

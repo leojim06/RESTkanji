@@ -10,7 +10,7 @@ const app = express();
 middlewaresConfig(app);
 
 app.get('/', (req, res) => {
-   res.status(200).send('Hello world!');
+   res.status(200).json('Hello world シ');
 });
 
 apiRoutes(app);
@@ -26,3 +26,5 @@ app.listen(constants.PORT, err => {
       `)
    }
 });
+
+export default app;

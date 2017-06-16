@@ -10,6 +10,7 @@ export default {
          firstName: Joi.string().required(),
          lastName: Joi.string().required(),
          userName: Joi.string().required(),
+         role: Joi.forbidden(),
       }
    },
 };

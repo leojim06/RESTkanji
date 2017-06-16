@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
-import { KanaModel } from './kanji.interface';
+import { KanjiModel } from './kanji.interface';
 
 const KanjiSchema: Schema = new Schema({
    kanji: {
@@ -56,28 +56,6 @@ const KanjiSchema: Schema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Word'
    }]
-   // samples: [{
-   //    _id: false,
-   //    word: {
-   //       type: String,
-   //       trim: true,
-   //       required: [true, 'La palabra de ejemplo es requerida'],
-   //    },
-   //    reading: {
-   //       type: String,
-   //       trim: true,
-   //       required: [true, 'La lectura de la palabra de ejemplo es requerida'],
-   //    },
-   //    meaning: [{
-   //       type: String,
-   //       trim: true,
-   //       required: [true, 'El significado es requerido']
-   //    }],
-   //    abrev: [{
-   //       type: String,
-   //       ref: 'Abrev',
-   //    }]
-   // }],
 });
 
 KanjiSchema.plugin(uniqueValidator, {
@@ -130,4 +108,4 @@ KanjiSchema.statics = {
    },
 }
 
-export default <KanaModel>model('Kanji', KanjiSchema);
+export default <KanjiModel>model('Kanji', KanjiSchema);

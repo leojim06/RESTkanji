@@ -49,12 +49,12 @@ export async function updateWord(req: Request, res: Response) {
 
 export async function deleteWord(req: Request, res: Response) {
    try {
-      const word = await Word.deleteWord(req.params.id);
+      const word = await Word.findById(req.params.id);
       if (!word) {
          return res.sendStatus(404);
-      } else {
-         return res.sendStatus(200);
       }
+      await word.remove();
+      return res.sendStatus(200);
    } catch (e) {
       res.status(400).json(e);
    }
