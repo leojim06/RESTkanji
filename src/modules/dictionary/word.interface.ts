@@ -11,5 +11,6 @@ export interface Word extends Document {
 export interface WordModel extends Model<Word> {
    createWord(body: Word): any;
    list(query: any): any;
-   findWordById(id: Schema.Types.ObjectId);
+   findWordById(id: Schema.Types.ObjectId): Word;
+   deleteWord(id: Schema.Types.ObjectId): any;
 }

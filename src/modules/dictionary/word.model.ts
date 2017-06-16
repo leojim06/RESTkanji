@@ -2,6 +2,7 @@ import { Schema, model } from 'mongoose';
 import * as uniqueValidator from 'mongoose-unique-validator';
 
 import { WordModel } from './word.interface';
+import Kanji from '../kanji/kanji.model';
 
 const WordSchema: Schema = new Schema({
    word: {
@@ -59,6 +60,14 @@ WordSchema.statics = {
    },
    findWordById(id) {
       return this.findById(id).populate('abrev');
+   },
+   async deleteWord(id) {
+      const kanji = await Kanji.findOne({ dictionary: { "$in": [id] } });
+      if (kanji && kanji.dictionary.indexOf(id) >= 0) {
+         kanji.dictionary.remove(id);
+         kanji.save();
+      }
+      return await this.findByIdAndRemove(id);
    }
 }
 

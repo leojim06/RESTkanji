@@ -2,7 +2,7 @@ import { Document, Model, Schema } from 'mongoose';
 
 import { Word } from '../dictionary/word.interface';
 
-export interface Kana extends Document {
+export interface Kanji extends Document {
    kanji: string;
    onYomi: {
       reading: string[];
@@ -21,7 +21,7 @@ export interface Kana extends Document {
    toJSON();
 }
 
-export interface KanaModel extends Model<Kana> {
+export interface KanjiModel extends Model<Kanji> {
    list(query: any): any;
    findKanjiById(id: Schema.Types.ObjectId): any;
 }
