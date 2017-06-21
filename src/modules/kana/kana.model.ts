@@ -19,10 +19,6 @@ const KanaSchema = new Schema({
     required: [true, 'El tipo del kana es requerido'],
     enum: ['Hiragana', 'Katakana'],
   },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-  }
 });
 
 KanaSchema.plugin(uniqueValidator, {
@@ -42,10 +38,8 @@ KanaSchema.methods = {
 };
 
 KanaSchema.statics = {
-  createKana(args, user) {
-    return this.create({
-      ...args, user,
-    })
+  async createKana(body) {
+    return await this.create(body);
   },
   list(query) {
     let result = this.find()

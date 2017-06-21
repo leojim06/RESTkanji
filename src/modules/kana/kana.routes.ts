@@ -18,6 +18,7 @@ routes.get('/katakana', kanaController.getKatakana);
 routes.get('/:id', kanaController.getKanaById);
 routes.patch('/:id',
   authJwt,
+  authRole('Admin'),
   validate(kanaValidation.updateKana),
   kanaController.updateKana);
 routes.delete('/:id',

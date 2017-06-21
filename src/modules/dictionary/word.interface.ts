@@ -2,8 +2,9 @@ import { Document, Model, Schema } from 'mongoose';
 
 export interface Word extends Document {
   word: string;
-  reqding: string;
+  reading: string;
   meaning: string[];
+  abrev: Schema.Types.ObjectId[];
 
   toJSON();
 }

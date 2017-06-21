@@ -12,7 +12,7 @@ export interface Kana extends Document {
 }
 
 export interface KanaModel extends Model<Kana> {
-  createKana(args: any, user: User): any;
+  createKana(args: any): any;
   list(query: any): any;
   getHiragana(query: any): any;
   getKatakana(query: any): any;
