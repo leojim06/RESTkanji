@@ -3,17 +3,17 @@ import { Document, Model } from 'mongoose';
 import { User } from '../users/user.interface';
 
 export interface Kana extends Document {
-   symbol: string;
-   strokes: number;
-   shape: string;
-   user: User;
+  symbol: string;
+  strokes: number;
+  shape: string;
+  user: User;
 
-   toJSON();
+  toJSON();
 }
 
 export interface KanaModel extends Model<Kana> {
-   createKana(args: any, user: User): any;
-   list(query: any): any;
-   getHiragana(query: any): any;
-   getKatakana(query: any): any;
+  createKana(args: any, user: User): any;
+  list(query: any): any;
+  getHiragana(query: any): any;
+  getKatakana(query: any): any;
 }

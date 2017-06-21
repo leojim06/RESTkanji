@@ -9,87 +9,87 @@ import constants from '../../config/constants';
 import { UserModel } from './user.interface';
 
 const UserSchema = new Schema({
-   email: {
-      type: String,
-      unique: true,
-      required: [true, 'Email is required!'],
-      validate: {
-         validator(email) {
-            return validator.isEmail(email);
-         },
-         message: '{VALUE} is not a valid email!'
-      }
-   },
-   firstName: {
-      type: String,
-      required: [true, 'FirstName is required!'],
-      trim: true,
-   },
-   lastName: {
-      type: String,
-      required: [true, 'LastName is required!'],
-      trim: true,
-   },
-   userName: {
-      type: String,
-      required: [true, 'UserName is required!'],
-      trim: true,
-      unique: true,
-   },
-   password: {
-      type: String,
-      required: [true, 'Password is required!'],
-      trim: true,
-      minlength: [6, 'Password need to be longer!'],
-      validate: {
-         validator(password) {
-            return passwordReg.test(password);
-         },
-         message: '{VALUE} is not a valid password!',
-      }
-   },
-   role: {
-      type: String,
-      enum: ['Admin', 'user'],
-      default: 'user',
-   }
+  email: {
+    type: String,
+    unique: true,
+    required: [true, 'Email is required!'],
+    validate: {
+      validator(email) {
+        return validator.isEmail(email);
+      },
+      message: '{VALUE} is not a valid email!'
+    }
+  },
+  firstName: {
+    type: String,
+    required: [true, 'FirstName is required!'],
+    trim: true,
+  },
+  lastName: {
+    type: String,
+    required: [true, 'LastName is required!'],
+    trim: true,
+  },
+  userName: {
+    type: String,
+    required: [true, 'UserName is required!'],
+    trim: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: [true, 'Password is required!'],
+    trim: true,
+    minlength: [6, 'Password need to be longer!'],
+    validate: {
+      validator(password) {
+        return passwordReg.test(password);
+      },
+      message: '{VALUE} is not a valid password!',
+    }
+  },
+  role: {
+    type: String,
+    enum: ['Admin', 'user'],
+    default: 'user',
+  }
 }, { timestamps: true });
 
 UserSchema.plugin(uniqueValidator, {
-   message: '{VALUE} ya fue tomado',
+  message: '{VALUE} ya fue tomado',
 });
 
 UserSchema.pre('save', function (next) {
-   if (this.isModified('password')) {
-      this.password = this._hashPassword(this.password);
-   }
-   return next();
+  if (this.isModified('password')) {
+    this.password = this._hashPassword(this.password);
+  }
+  return next();
 });
 
 UserSchema.methods = {
-   _hashPassword(password) {
-      return hashSync(password);
-   },
-   authenticateUser(password) {
-      return compareSync(password, this.password);
-   },
-   createToken() {
-      const payload = { _id: this._id, };
-      return jwt.sign(payload, constants.JWT_SECRET);
-   },
-   toAuthJSON() {
-      return {
-         _id: this._id,
-         userName: this.userName,
-         token: `JWT ${this.createToken()}`,
-      };
-   },
-   toJSON() {
-      return {
-         _id: this._id,
-         userName: this.userName,
-      };
-   },
+  _hashPassword(password) {
+    return hashSync(password);
+  },
+  authenticateUser(password) {
+    return compareSync(password, this.password);
+  },
+  createToken() {
+    const payload = { _id: this._id, };
+    return jwt.sign(payload, constants.JWT_SECRET);
+  },
+  toAuthJSON() {
+    return {
+      _id: this._id,
+      userName: this.userName,
+      token: `JWT ${this.createToken()}`,
+    };
+  },
+  toJSON() {
+    return {
+      _id: this._id,
+      userName: this.userName,
+    };
+  },
 }
 
 export default <UserModel>model('User', UserSchema);

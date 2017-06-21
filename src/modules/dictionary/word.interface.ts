@@ -1,15 +1,15 @@
 import { Document, Model, Schema } from 'mongoose';
 
 export interface Word extends Document {
-   word: string;
-   reqding: string;
-   meaning: string[];
+  word: string;
+  reqding: string;
+  meaning: string[];
 
-   toJSON();
+  toJSON();
 }
 
 export interface WordModel extends Model<Word> {
-   createWord(body: Word): any;
-   list(query: any): any;
-   findWordById(id: Schema.Types.ObjectId): Word;
+  createWord(body: Word): any;
+  list(query: any): any;
+  findWordById(id: Schema.Types.ObjectId): Word;
 }

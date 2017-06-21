@@ -7,11 +7,11 @@ import constants from './constants';
 (<any>mongoose).Promise = global.Promise;
 
 try {
-   mongoose.connect(constants.MONGO_URL);
+  mongoose.connect(constants.MONGO_URL);
 } catch (e) {
-   mongoose.createConnection(constants.MONGO_URL);
+  mongoose.createConnection(constants.MONGO_URL);
 }
 
 mongoose.connection
-   .once('open', () => { })
-   .on('error', e => { throw e; });
+  .once('open', () => { })
+  .on('error', e => { throw e; });

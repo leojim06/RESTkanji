@@ -8,21 +8,21 @@ import kanaValidation from './kana.validations';
 const routes: Router = Router();
 
 routes.post('/',
-   authJwt,
-   authRole('Admin'),
-   validate(kanaValidation.createKana),
-   kanaController.createKana);
+  authJwt,
+  authRole('Admin'),
+  validate(kanaValidation.createKana),
+  kanaController.createKana);
 routes.get('/', kanaController.getKanaList);
 routes.get('/hiragana', kanaController.getHiragana);
 routes.get('/katakana', kanaController.getKatakana);
 routes.get('/:id', kanaController.getKanaById);
 routes.patch('/:id',
-   authJwt,
-   validate(kanaValidation.updateKana),
-   kanaController.updateKana);
+  authJwt,
+  validate(kanaValidation.updateKana),
+  kanaController.updateKana);
 routes.delete('/:id',
-   authJwt,
-   authRole('Admin'),
-   kanaController.deleteKana);
+  authJwt,
+  authRole('Admin'),
+  kanaController.deleteKana);
 
 export default routes;

@@ -8,20 +8,20 @@ import wordValidation from './word.validations';
 const routes: Router = Router();
 
 routes.post('/',
-   authJwt,
-   authRole('Admin'),
-   validate(wordValidation.createWord),
-   dictionaryController.createWord);
+  authJwt,
+  authRole('Admin'),
+  validate(wordValidation.createWord),
+  dictionaryController.createWord);
 routes.get('/', dictionaryController.getDictionary);
 routes.get('/:id', dictionaryController.getWordById);
 routes.patch('/:id',
-   authJwt,
-   authRole('Admin'),
-   validate(wordValidation.updateWord),
-   dictionaryController.updateWord);
+  authJwt,
+  authRole('Admin'),
+  validate(wordValidation.updateWord),
+  dictionaryController.updateWord);
 routes.delete('/:id',
-   authJwt,
-   authRole('Admin'),
-   dictionaryController.deleteWord);
+  authJwt,
+  authRole('Admin'),
+  dictionaryController.deleteWord);
 
 export default routes;

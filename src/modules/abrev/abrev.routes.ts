@@ -8,20 +8,20 @@ import abrevValidation from './abrev.validations';
 const routes: Router = Router();
 
 routes.post('/',
-   authJwt,
-   authRole('Admin'),
-   validate(abrevValidation.createAbrev),
-   abrevController.createAbrev);
+  authJwt,
+  authRole('Admin'),
+  validate(abrevValidation.createAbrev),
+  abrevController.createAbrev);
 routes.get('/', abrevController.getAbrevList);
 routes.get('/:index', abrevController.getAbrevByIndex);
 routes.patch('/:index',
-   authJwt,
-   authRole('Admin'),
-   validate(abrevValidation.updateAbrev),
-   abrevController.updateAbrev);
+  authJwt,
+  authRole('Admin'),
+  validate(abrevValidation.updateAbrev),
+  abrevController.updateAbrev);
 routes.delete('/:index',
-   authJwt,
-   authRole('Admin'),
-   abrevController.deleteAbrev);
+  authJwt,
+  authRole('Admin'),
+  abrevController.deleteAbrev);
 
 export default routes;
