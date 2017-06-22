@@ -13,7 +13,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 
 const abrevURL: string = '/api/v1/abrevs';
-const usersURL = '/api/v1/users';
+const usersURL: string = '/api/v1/users';
 
 const adminUserTest = {
   email: 'admin@sample.com',

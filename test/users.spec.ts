@@ -40,7 +40,7 @@ describe('RUTAS GENERALES', () => {
     it('Debe tener un status 200 y el mensaje de Bienvenida \'Hello World シ\'', (done) => {
       chai.request(app).get('/').end((err, res) => {
         expect(err).to.be.null;
-        expect(res.status).to.equal(200);
+        expect(res).to.have.status(200);
         expect(res).to.be.json;
         expect(res.body).to.equal('Hello world シ');
         done();
