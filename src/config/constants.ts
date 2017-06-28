@@ -1,16 +1,15 @@
 const devConfig = {
-  //    MONGO_URL: 'mongodb://localhost/japaneseapi-dev',
-  MONGO_URL: "mongodb://leojim06:KairinYuna66@ds139949.mlab.com:39949/japaneseapi-dev",
+     MONGO_URL: process.env.MONGO_URL ||  'mongodb://localhost/japaneseapi-dev',
 }
 const testConfig = {
-  MONGO_URL: 'mongodb://localhost/japaneseapi-test',
+  MONGO_URL: process.env.MONGO_URL ||  'mongodb://localhost/japaneseapi-test',
 }
 const prodConfig = {
-  MONGO_URL: 'mongodb://localhost/japaneseapi-prod',
+  MONGO_URL: process.env.MONGO_URL || 'mongodb://localhost/japaneseapi-prod',
 }
 const defaultConfig = {
   PORT: process.env.PORT || 3000,
-  JWT_SECRET: 'thisisasecret',
+  JWT_SECRET: process.env.SECRET ||  'thisisasecret',
 };
 
 function envConfig(env) {

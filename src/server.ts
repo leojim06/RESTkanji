@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as path from 'path';
 
 import constants from './config/constants';
 import './config/database';
@@ -9,8 +10,10 @@ const app = express();
 
 middlewaresConfig(app);
 
+app.use(express.static(path.join(__dirname, '')));
+
 app.get('/', (req, res) => {
-  res.status(200).json('Hello world シ');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 apiRoutes(app);
