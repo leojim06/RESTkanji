@@ -42,6 +42,7 @@ KanaSchema.statics = {
     return await this.create(body);
   },
   list(query) {
+    if (query.letter) return this.findOne({ symbol: { $regex: query.letter } })
     let result = this.find()
       .sort({ symbol: 1 })
       .skip((query.limit * query.page) + query.skip)
@@ -51,6 +52,10 @@ KanaSchema.statics = {
     return result;
   },
   getHiragana(query) {
+    if (query.letter) return this.findOne({
+      symbol: { $regex: query.letter },
+      shape: 'Hiragana'
+    })
     let result = this.find({ shape: 'Hiragana' })
       .sort({ symbol: 1 })
       .skip((query.limit * query.page) + query.skip)
@@ -60,6 +65,10 @@ KanaSchema.statics = {
     return result;
   },
   getKatakana(query) {
+    if (query.letter) return this.findOne({
+      symbol: { $regex: query.letter },
+      shape: 'Katakana'
+    })
     let result = this.find({ shape: 'Katakana' })
       .sort({ symbol: 1 })
       .skip((query.limit * query.page) + query.skip)

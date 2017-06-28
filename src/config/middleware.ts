@@ -5,7 +5,7 @@ import * as helmet from 'helmet';
 import * as passport from 'passport';
 
 const isDev = process.env.NODE_ENV === 'development';
-const isProd = process.env.NODE_ENV === 'prduction';
+const isProd = process.env.NODE_ENV === 'production';
 
 export default app => {
   if (isProd) {

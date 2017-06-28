@@ -26,14 +26,14 @@ export default {
       strokes: Joi.number().positive().integer(),
       level: Joi.number().positive().integer(),
       kunYomi: {
-        meaning: Joi.forbidden(),
-        reading: Joi.forbidden(),
+        meaning: Joi.array(),
+        reading: Joi.array(),
       },
       onYomi: {
-        meaning: Joi.forbidden(),
-        reading: Joi.forbidden(),
+        meaning: Joi.array(),
+        reading: Joi.array(),
       },
-      dictionary: Joi.forbidden(),
+      dictionary: Joi.array(),
     },
   },
 };
