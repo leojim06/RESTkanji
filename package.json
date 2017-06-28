@@ -48,7 +48,6 @@
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.7",
     "mocha": "^3.4.2",
-    "morgan": "^1.8.2",
     "ts-node": "^3.0.6",
     "typescript": "^2.3.4"
   },
@@ -63,6 +62,7 @@
     "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.10.4",
     "mongoose-unique-validator": "^1.0.5",
+    "morgan": "^1.8.2",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",
