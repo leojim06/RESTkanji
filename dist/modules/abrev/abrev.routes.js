@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var validate = require("express-validation");
+var abrevController = require("./abrev.controller");
+var auth_service_1 = require("../../services/auth.service");
+var abrev_validations_1 = require("./abrev.validations");
+var routes = express_1.Router();
+routes.post('/', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(abrev_validations_1.default.createAbrev), abrevController.createAbrev);
+routes.get('/', abrevController.getAbrevList);
+routes.get('/:index', abrevController.getAbrevByIndex);
+routes.patch('/:index', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(abrev_validations_1.default.updateAbrev), abrevController.updateAbrev);
+routes.delete('/:index', auth_service_1.authJwt, auth_service_1.authRole('Admin'), abrevController.deleteAbrev);
+exports.default = routes;

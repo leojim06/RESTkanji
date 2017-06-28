@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var validate = require("express-validation");
+var kanjiController = require("./kanji.controller");
+var auth_service_1 = require("../../services/auth.service");
+var kanji_validations_1 = require("./kanji.validations");
+var routes = express_1.Router();
+routes.post('/', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(kanji_validations_1.default.createKaji), kanjiController.createKanji);
+routes.get('/', kanjiController.getKanjiList);
+routes.get('/:id', kanjiController.getKanjiById);
+routes.patch('/:id', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(kanji_validations_1.default.updateKaji), kanjiController.updateKanji);
+routes.delete('/:id', auth_service_1.authJwt, auth_service_1.authRole('Admin'), kanjiController.deleteKanji);
+exports.default = routes;

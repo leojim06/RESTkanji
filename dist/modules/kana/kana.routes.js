@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var validate = require("express-validation");
+var kanaController = require("./kana.controller");
+var auth_service_1 = require("../../services/auth.service");
+var kana_validations_1 = require("./kana.validations");
+var routes = express_1.Router();
+routes.post('/', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(kana_validations_1.default.createKana), kanaController.createKana);
+routes.get('/', kanaController.getKanaList);
+routes.get('/hiragana', kanaController.getHiragana);
+routes.get('/katakana', kanaController.getKatakana);
+routes.get('/:id', kanaController.getKanaById);
+routes.patch('/:id', auth_service_1.authJwt, auth_service_1.authRole('Admin'), validate(kana_validations_1.default.updateKana), kanaController.updateKana);
+routes.delete('/:id', auth_service_1.authJwt, auth_service_1.authRole('Admin'), kanaController.deleteKana);
+exports.default = routes;
