@@ -4,7 +4,7 @@
   "description": "API para el manejo de los tres sistemas de escritura japonés (hiragana, katakana, kanji)",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon dist/server.js",
+    "start": "node server.js",
     "test": "mocha --reporter spec --compilers ts:ts-node/register test/**/*.spec.ts"
   },
   "repository": {
