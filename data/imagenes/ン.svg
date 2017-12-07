@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866665 33.866667"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title5497">ン</title>
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>ン</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Oscar Javier Jiménez Mejía</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>Japonés</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text5492"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;line-height:100%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     aria-label="ン">
+    <path
+       id="path5494"
+       style="stroke-width:0.26458332px"
+       d="M 26.65677,13.905094 Q 21.398176,24.819156 8.9958326,25.414469 8.4997388,26.704312 8.0036451,25.612906 l -0.79375,-2.579687 Q 20.108332,22.735563 24.573176,12.416813 Z m -13.989844,0 Q 9.9880201,11.424625 7.6067701,9.8371252 L 9.2934888,7.7535315 q 2.0835942,1.2898438 5.2585942,4.2664065 z" />
+  </g>
+</svg>

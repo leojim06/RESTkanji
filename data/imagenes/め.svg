@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866665 33.866667"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title4815">め</title>
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>め</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Oscar Javier Jiménez Mejía</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>Japonés</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text4810"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;line-height:100%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     aria-label="め">
+    <path
+       id="path4812"
+       style="stroke-width:0.26458332px"
+       d="m 19.364192,10.930599 q 3.671094,0.198438 5.853906,2.38125 2.182813,2.182812 2.182813,5.853906 0,3.373438 -1.984375,5.357813 -1.785938,1.785937 -4.960938,2.877343 l -1.289844,-1.885156 q 3.274219,-1.091406 4.663282,-2.480469 1.488281,-1.488281 1.488281,-3.96875 0,-2.778125 -1.488281,-4.266406 -1.885157,-1.885156 -4.861719,-2.083593 -1.091406,4.167187 -3.274219,8.532812 l 1.885156,2.182812 -1.587499,1.190625 -1.389063,-1.5875 q -0.79375,1.289844 -1.686719,2.182813 -1.289843,1.289844 -2.579687,1.289844 -1.3890626,0 -2.5796876,-1.190625 -1.2898437,-1.289844 -1.2898437,-3.671094 0,-3.571875 3.8695313,-7.540625 Q 9.6407546,11.129037 9.3430984,8.4501304 h 1.8851566 q 0.892968,0.1984374 0.198437,0.7937499 0.198438,2.1828127 0.595313,3.6710937 2.579687,-1.5875 5.258593,-1.984375 0.396875,-1.4882812 0.79375,-4.4648436 l 1.984375,0.4960937 q 0.992188,0.396875 0,0.79375 z M 13.21263,21.447786 q -1.289844,-2.083593 -2.282032,-5.159375 -2.4804684,2.976563 -2.4804684,5.55625 0,1.389063 0.79375,2.182813 0.4960938,0.496094 1.0914064,0.496094 0.496094,0 1.190625,-0.694532 0.595312,-0.595312 1.686719,-2.38125 z m 3.671093,-8.532812 q -2.38125,0.396875 -4.365625,1.984375 0.992188,3.373437 1.885157,4.663281 1.686718,-3.274219 2.480468,-6.647656 z" />
+  </g>
+</svg>

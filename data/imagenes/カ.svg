@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866665 33.866667"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title5035">カ</title>
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>カ</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Oscar Javier Jiménez Mejía</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>Japonés</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text5030"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;line-height:100%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     aria-label="カ">
+    <path
+       id="path5032"
+       style="stroke-width:0.26458332px"
+       d="m 23.382551,13.857551 -5.655469,0.198438 Q 17.13177,22.489583 9.8888011,27.351301 L 8.2020824,25.664582 Q 15.048176,21.10052 15.445051,14.055989 L 8.4005199,14.254426 8.2020824,12.270051 15.54427,12.071614 v -5.55625 h 2.083594 q 1.091406,0.1984375 0.198437,0.79375 v 4.7625 l 7.838281,-0.297656 v 6.151562 q 0,4.861719 -0.892969,6.846094 -0.892968,1.984375 -3.770312,1.984375 h -2.38125 L 18.322395,24.27552 q 1.488281,0.198437 2.579687,0.198437 1.488281,0 1.885156,-0.992187 0.595313,-1.5875 0.595313,-5.55625 z" />
+  </g>
+</svg>

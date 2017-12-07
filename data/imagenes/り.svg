@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866665 33.866667"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title4881">り</title>
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>り</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Oscar Javier Jiménez Mejía</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>Japonés</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text4876"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;line-height:100%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     aria-label="り">
+    <path
+       id="path4878"
+       style="stroke-width:0.26458332px"
+       d="m 21.197258,16.486848 q 0,-6.7468751 -0.396875,-10.4179688 h 1.984375 q 1.091406,0.099219 0.198437,0.79375 0.297657,3.1749998 0.297657,9.7234378 0,7.441406 -7.044531,11.211718 l -1.686719,-1.686719 q 6.647656,-3.175 6.647656,-9.624218 z m -6.746875,3.274219 q -0.892969,0.694531 -1.984375,0.694531 -0.694531,0 -1.289844,-0.595313 -0.694531,-0.694531 -0.694531,-5.953125 0,-3.9687496 0.396875,-7.2429683 h 2.182813 q 0.79375,0.2976563 0,0.6945313 -0.496094,2.3812499 -0.496094,6.548437 0,4.266407 0.396875,4.266407 0.297656,0 0.79375,-0.396875 0.694531,-0.595313 2.282031,-2.678907 l 1.488281,1.488282 q -1.686718,2.083593 -3.075781,3.175 z" />
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="128"
+   height="128"
+   viewBox="0 0 33.866665 33.866667"
+   version="1.1"
+   id="svg8">
+  <title
+     id="title4762">ほ</title>
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>ほ</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Oscar Javier Jiménez Mejía</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:language>Japonés</dc:language>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>leojim06</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="text4757"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;line-height:100%;font-family:Roboto;-inkscape-font-specification:'Roboto, Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     aria-label="ほ">
+    <path
+       id="path4759"
+       style="stroke-width:0.26458332px"
+       d="m 21.646223,15.693097 q 0.198438,2.480469 0.09922,5.060156 3.075781,1.389063 5.655468,3.075781 l -1.190624,1.885157 q -3.472657,-2.282032 -4.564063,-2.778125 0,1.885156 -0.892969,2.778125 -1.289843,1.289843 -3.671093,1.289843 -2.38125,0 -3.472657,-1.091406 -0.992187,-0.992187 -0.992187,-2.480469 0,-1.389062 1.091406,-2.480468 1.091406,-1.091406 3.274219,-1.091406 1.5875,0 2.678906,0.297656 0.09922,-2.182813 -0.09922,-4.365625 l -7.14375,0.297656 v -2.083594 l 7.044532,-0.297656 q -0.09922,-1.984375 -0.297657,-3.671094 l -6.35,0.297657 V 8.2516909 L 25.714192,7.6563784 v 2.0835938 l -4.464844,0.1984375 q 0.198438,1.5875003 0.297656,3.6710933 l 5.258594,-0.297656 v 2.083594 z m -2.083594,6.449219 q -1.091406,-0.496094 -2.579687,-0.496094 -1.389063,0 -1.885156,0.496094 -0.595313,0.595312 -0.595313,1.289843 0,0.694532 0.396875,1.091407 0.595313,0.595312 1.885156,0.595312 1.488282,0 2.182813,-0.694531 0.694531,-0.694531 0.595312,-2.282031 z M 9.7399733,8.1524722 q -1.190625,4.3656248 -1.190625,11.3109378 0,3.770312 0.5953125,6.647656 l -2.2820312,0.396875 q -0.396875,-2.778125 -0.396875,-6.846094 0,-6.548437 0.9921874,-12.7992185 l 2.1828125,0.4960937 q 1.1906245,0.2976562 0.099219,0.79375 z" />
+  </g>
+</svg>
